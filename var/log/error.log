@@ -1,0 +1,161 @@
+2023-09-24 21:19:00 23090 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:19:25 23105 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:19:25 23105 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data={'name': 'John'}, update_data=None)
+2023-09-24 21:21:53 23170 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:21:53 23170 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data={'name': 'John'}, update_data=None)
+2023-09-24 21:21:56 23180 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:21:56 23180 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data=None, update_data=None)
+2023-09-24 21:22:07 23187 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:22:15 23192 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:22:15 23192 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data=None, update_data=None)
+2023-09-24 21:23:50 23240 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:23:50 23240 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data=None, update_data=None)
+2023-09-24 21:24:38 23278 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:24:38 23278 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data={'name': 'John'}, update_data=None)
+2023-09-24 21:24:38 23278 [INFO] Found documents:
+2023-09-24 21:24:38 23278 [INFO] {'_id': ObjectId('6510324f9b737dc6388630cf'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:24:38 23278 [INFO] {'_id': ObjectId('651034e2fb021093bd285bf8'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:25:53 23306 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:25:53 23306 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data=None, update_data=None)
+2023-09-24 21:30:49 23446 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:30:49 23446 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data=None, update_data=None)
+2023-09-24 21:33:50 23549 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:33:50 23549 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data=None, update_data=None)
+2023-09-24 21:33:54 23556 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:33:54 23556 [TRACE] var->args=Namespace(insert_data=None, delete_data=None, search_data=None, update_data=None)
+2023-09-24 21:34:10 23567 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:34:34 23588 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:34:39 23595 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:35:51 23642 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:37:51 23794 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:37:54 23803 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:39:08 23887 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:39:08 23887 [ERROR] 命令行参数错误，请查看使用说明:
+2023-09-24 21:40:11 23930 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:40:11 23930 [INFO] 查询到以下内容:
+2023-09-24 21:40:11 23930 [INFO] {'_id': ObjectId('6510324f9b737dc6388630cf'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:40:11 23930 [INFO] {'_id': ObjectId('651034e2fb021093bd285bf8'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:40:37 23942 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:40:50 23950 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:42:58 24057 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:44:30 24097 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:44:30 24097 [INFO] Deleted 0 documents
+2023-09-24 21:44:39 24115 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:44:39 24115 [INFO] 查询到以下内容:
+2023-09-24 21:44:49 24134 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:45:14 24152 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:45:14 24152 [INFO] 查询到以下内容:
+2023-09-24 21:45:14 24152 [INFO] {'_id': ObjectId('65103d5169e05fcb448ab3ed'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:45:19 24156 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:45:19 24156 [INFO] Inserted document with ID: 65103d6f1bd45c659b53babe
+2023-09-24 21:45:22 24160 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:45:22 24160 [INFO] 查询到以下内容:
+2023-09-24 21:45:22 24160 [INFO] {'_id': ObjectId('65103d5169e05fcb448ab3ed'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:45:22 24160 [INFO] {'_id': ObjectId('65103d6f1bd45c659b53babe'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:45:26 24165 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:45:26 24165 [INFO] Deleted 2 documents
+2023-09-24 21:45:29 24169 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:45:29 24169 [INFO] 查询到以下内容:
+2023-09-24 21:46:41 24204 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:46:41 24204 [INFO] 查询到以下内容:
+2023-09-24 21:46:44 24209 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:46:44 24209 [INFO] Inserted data with ID: 65103dc411a5497585be9cf8
+2023-09-24 21:46:46 24213 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:46:46 24213 [INFO] 查询到以下内容:
+2023-09-24 21:46:46 24213 [INFO] {'_id': ObjectId('65103dc411a5497585be9cf8'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:46:59 24223 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:46:59 24223 [INFO] 查询到以下数据:
+2023-09-24 21:46:59 24223 [INFO] {'_id': ObjectId('65103dc411a5497585be9cf8'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:47:03 24228 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:47:03 24228 [INFO] Deleted 1 条数据
+2023-09-24 21:47:35 24251 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:47:35 24251 [INFO] Inserted data with ID: 65103df7bca24cb21db4107e
+2023-09-24 21:47:41 24255 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:47:41 24255 [INFO] 查询到以下数据:
+2023-09-24 21:47:41 24255 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:48:24 24289 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:48:24 24289 [INFO] The following data was queried:
+2023-09-24 21:48:24 24289 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:48:35 24296 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:48:35 24296 [INFO] The following data was queried:
+2023-09-24 21:48:35 24296 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:49:49 24339 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:49:49 24339 [INFO] Updated 0 data
+2023-09-24 21:49:55 24344 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:49:55 24344 [INFO] The following data was queried:
+2023-09-24 21:49:55 24344 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:50:10 24360 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:50:10 24360 [INFO] Inserted data with ID: 65103e926dbd210c8d29aff9
+2023-09-24 21:50:26 24367 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:50:26 24367 [INFO] Updated 1 data
+2023-09-24 21:50:29 24371 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:50:29 24371 [INFO] The following data was queried:
+2023-09-24 21:50:29 24371 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:50:42 24377 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:50:42 24377 [INFO] The following data was queried:
+2023-09-24 21:50:48 24386 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:50:54 24391 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:50:54 24391 [INFO] The following data was queried:
+2023-09-24 21:50:54 24391 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 32, 'city': 'New York'}
+2023-09-24 21:54:17 24501 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:54:33 24512 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:54:40 24521 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:56:26 24579 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:56:46 24592 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:56:58 24606 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 21:56:58 24606 [INFO] 查询到以下内容:
+2023-09-24 21:56:58 24606 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 21:56:58 24606 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 32, 'city': 'New York'}
+2023-09-24 21:57:06 24614 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:00:05 24706 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:00:05 24706 [INFO] 查询到以下内容:
+2023-09-24 22:00:05 24706 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 32, 'city': 'New York'}
+2023-09-24 22:00:08 24710 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:00:08 24710 [ERROR] 命令行参数错误，请查看使用说明:
+2023-09-24 22:01:11 24741 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:01:11 24741 [INFO] 查询到以下内容:
+2023-09-24 22:01:11 24741 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 22:01:11 24741 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 32, 'city': 'New York'}
+2023-09-24 22:01:14 24747 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:01:14 24747 [INFO] 查询到以下内容:
+2023-09-24 22:01:14 24747 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 32, 'city': 'New York'}
+2023-09-24 22:01:47 24770 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:01:55 24778 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:02:00 24782 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:02:00 24782 [ERROR] 查询条件必须是JSON格式
+2023-09-24 22:12:04 25266 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:12:04 25266 [INFO] The following data was queried:
+2023-09-24 22:12:04 25266 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 22:12:04 25266 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 32, 'city': 'New York'}
+2023-09-24 22:12:50 25289 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:12:50 25289 [INFO] Updated 1 data
+2023-09-24 22:12:53 25295 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:12:53 25295 [INFO] The following data was queried:
+2023-09-24 22:12:53 25295 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 30, 'city': 'New York'}
+2023-09-24 22:12:53 25295 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 34, 'city': 'New York'}
+2023-09-24 22:13:16 25318 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:13:16 25318 [INFO] The following data was queried:
+2023-09-24 22:13:16 25318 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 34, 'city': 'New York'}
+2023-09-24 22:14:01 25348 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:14:01 25348 [INFO] Updated 1 data
+2023-09-24 22:14:03 25352 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:14:03 25352 [INFO] The following data was queried:
+2023-09-24 22:14:03 25352 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 38, 'city': 'New York'}
+2023-09-24 22:14:22 25366 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:14:22 25366 [INFO] Updated 1 data
+2023-09-24 22:14:27 25371 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:14:27 25371 [INFO] The following data was queried:
+2023-09-24 22:14:27 25371 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 34, 'city': 'Shanghai'}
+2023-09-24 22:14:27 25371 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 38, 'city': 'New York'}
+2023-09-24 22:17:10 25477 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:20:01 25567 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:20:01 25567 [INFO] The following data was queried:
+2023-09-24 22:20:01 25567 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 34, 'city': 'Shanghai'}
+2023-09-24 22:20:01 25567 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 38, 'city': 'New York'}
+2023-09-24 22:21:21 25707 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:21:24 25712 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:21:24 25712 [INFO] The following data was queried:
+2023-09-24 22:21:24 25712 [INFO] {'_id': ObjectId('65103df7bca24cb21db4107e'), 'name': 'John', 'age': 34, 'city': 'Shanghai'}
+2023-09-24 22:21:24 25712 [INFO] {'_id': ObjectId('65103e926dbd210c8d29aff9'), 'name': 'zcx', 'age': 38, 'city': 'New York'}
+2023-09-24 22:21:27 25716 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
+2023-09-24 22:21:38 25723 [INFO] 日志配置文件 '/home/colamps/workspace/github/mongodb-tool/conf/log.ini' 加载成功
