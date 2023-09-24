@@ -5,7 +5,8 @@ mongodb操作工具
 ## 环境准备
 
 ```bash
-pip install happy-python pymongo
+pip install happy-python
+yay -S python-pymongo 或 sudo pacman -S python-pymongo
 ```
 
 ## 单元测试
