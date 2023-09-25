@@ -2,8 +2,8 @@ import configparser
 import unittest
 import pymongo
 from pymongo import MongoClient
-from method.use_mongodb import delete_document
-from method.use_mongodb import insert_document
+from method.mongodb_base import delete_document
+from method.mongodb_base import insert_document
 
 
 config = configparser.ConfigParser()

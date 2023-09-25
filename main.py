@@ -3,10 +3,12 @@ import configparser
 import json
 import pymongo
 from method.common import hlog
-from method.use_mongodb import delete_document
-from method.use_mongodb import find_document
-from method.use_mongodb import insert_document
-from method.use_mongodb import update_document
+from method.mongodb_base import delete_document
+from method.mongodb_base import find_document
+from method.mongodb_base import insert_document
+from method.mongodb_base import update_document
+from method.mongodb_dump import export_data_to_file
+from method.mongodb_import import import_data_from_file
 
 config = configparser.ConfigParser()
 config.read('conf/config.ini')
@@ -51,37 +53,55 @@ def main():
                         dest='update_data',
                         type=json.loads)
 
+    parser.add_argument('--export',
+                        help='导出数据到指定文件（JSON格式）',
+                        action='store',
+                        dest='export_file',
+                        type=str)
+
+    parser.add_argument('--import',
+                        help='从指定文件导入数据（JSON格式）',
+                        action='store',
+                        dest='import_file',
+                        type=str)
+
     args = parser.parse_args()
 
     hlog.var('args', args)
 
     if args.insert_data:
         inserted_id = insert_document(collection, args.insert_data)
-        hlog.info(f"Inserted data with ID: {inserted_id}")
+        hlog.info(f"已插入数据，ID: {inserted_id}")
     elif args.search_data is not None:
         if args.search_data:
             try:
                 search_criteria = json.loads(args.search_data)
                 found_documents = find_document(collection, search_criteria)
-                hlog.info("The following data was queried:")
+                hlog.info("以下数据已查询：")
                 for document in found_documents:
                     hlog.info(document)
             except json.JSONDecodeError:
-                hlog.error("查询条件必须是JSON格式")
+                hlog.error("查询条件必须为JSON格式")
         else:
             found_documents = find_document(collection, {})
-            hlog.info("The following data was queried:")
+            hlog.info("以下数据已查询：")
             for document in found_documents:
                 hlog.info(document)
     elif args.update_data:
         update_query = {"name": args.update_data["name"]}
         updated_count = update_document(collection, update_query, args.update_data)
-        hlog.info(f"Updated {updated_count} data")
+        hlog.info(f"已更新{updated_count}条数据")
     elif args.delete_data:
         deleted_count = delete_document(collection, args.delete_data)
-        hlog.info(f"Deleted {deleted_count} data")
+        hlog.info(f"已删除{deleted_count}条数据")
+    elif args.export_file:
+        export_data_to_file(collection, args.export_file)
+        hlog.info(f"数据已导出至文件：{args.export_file}")
+    elif args.import_file:
+        import_data_from_file(collection, args.import_file)
+        hlog.info(f"数据已从文件导入：{args.import_file}")
     else:
-        hlog.error("命令行参数错误，请查看使用说明:")
+        hlog.error("命令行参数错误，请查看使用说明：")
         parser.print_help()
 
 
