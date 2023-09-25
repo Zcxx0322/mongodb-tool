@@ -13,6 +13,10 @@ python -m pip install "pymongo[srv]" --trusted-host pypi.tuna.tsinghua.edu.cn
 
 ## 单元测试
 
+```bash
+cd tests && pytest
+```
+
 ## 使用举例
 
 ### 增加数据

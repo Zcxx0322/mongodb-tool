@@ -1,12 +1,12 @@
-import pymongo
-import configparser
 import argparse
+import configparser     
 import json
-from common import hlog
-from use_mongodb import insert_document
-from use_mongodb import find_document
-from use_mongodb import update_document
-from use_mongodb import delete_document
+import pymongo
+from method.common import hlog
+from method.use_mongodb import delete_document
+from method.use_mongodb import find_document
+from method.use_mongodb import insert_document
+from method.use_mongodb import update_document
 
 config = configparser.ConfigParser()
 config.read('conf/config.ini')
