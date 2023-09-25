@@ -4,9 +4,11 @@ mongodb操作工具
 
 ## 环境准备
 
+### 安装happy-python & pymongo
 ```bash
 pip install happy-python
-yay -S python-pymongo 或 sudo pacman -S python-pymongo
+
+python -m pip install "pymongo[srv]" --trusted-host pypi.tuna.tsinghua.edu.cn
 ```
 
 ## 单元测试
@@ -30,9 +32,14 @@ python main.py -d '{"name": "John", "age": 30, "city": "New York"}'
 ```
 
 ### 查找数据
+
+#### 查找指定键值对数据
 ```bash
 python main.py -s '{"name": "John"}'
+```
 
+#### 查找集合中所有数据
+```bash
 python main.py -s 
 ```
 
