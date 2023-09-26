@@ -7,7 +7,7 @@ from method.mongodb_base import delete_document
 from method.mongodb_base import find_document
 from method.mongodb_base import insert_document
 from method.mongodb_base import update_document
-from method.mongodb_dump import export_data_to_file
+from method.mongodb_dump import dump_data_to_file
 from method.mongodb_import import import_data_from_file
 
 config = configparser.ConfigParser()
@@ -24,7 +24,7 @@ collection = db[collection_name]
 def main():
     parser = argparse.ArgumentParser(prog='mongodb_tool',
                                      description='MongoDB工具',
-                                     usage='%(prog)s [-i <data>] [-d <data>] [-s <data>] [-u <data>]')
+                                     usage='%(prog)s [-i <data>] [-d <data>] [-s <data>] [-u <data>] [--dump <filename>] [--import <filename>]')
 
     parser.add_argument('-i',
                         help='执行插入操作，提供数据（JSON格式）',
@@ -53,10 +53,10 @@ def main():
                         dest='update_data',
                         type=json.loads)
 
-    parser.add_argument('--export',
+    parser.add_argument('--dump',
                         help='导出数据到指定文件（JSON格式）',
                         action='store',
-                        dest='export_file',
+                        dest='dump_file',
                         type=str)
 
     parser.add_argument('--import',
@@ -94,9 +94,9 @@ def main():
     elif args.delete_data:
         deleted_count = delete_document(collection, args.delete_data)
         hlog.info(f"已删除{deleted_count}条数据")
-    elif args.export_file:
-        export_data_to_file(collection, args.export_file)
-        hlog.info(f"数据已导出至文件：{args.export_file}")
+    elif args.dump_file:
+        dump_data_to_file(collection, args.dump_file)
+        hlog.info(f"数据已导出至文件：{args.dump_file}")
     elif args.import_file:
         import_data_from_file(collection, args.import_file)
         hlog.info(f"数据已从文件导入：{args.import_file}")
