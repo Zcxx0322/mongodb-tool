@@ -73,11 +73,6 @@ python -c "import site; print('%s/bin/zcx' % site.USER_BASE)"
 ~/.local/bin/zcx
 ```
 
-### 增加软链接
-```bash
-sudo ln -s ~/.local/bin/zcx /usr/local/bin/zcx
-```
-
 ### 增加数据
 
 ```bash
