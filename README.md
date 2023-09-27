@@ -9,12 +9,6 @@ mongodb操作工具
 poetry install
 ```
 
-## 单元测试
-
-```bash
-poetry run pytest -s
-```
-
 ## 本地安装
 ```bash
 poetry build -f wheel
