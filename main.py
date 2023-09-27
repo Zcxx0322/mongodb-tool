@@ -1,8 +1,12 @@
 import argparse
-import configparser     
+import configparser
 import json
+import os
+
 import pymongo
-from method.common import hlog
+from happy_python import HappyLog
+
+from method.file_create import create_config_if_not_exists
 from method.mongodb_base import delete_document
 from method.mongodb_base import find_document
 from method.mongodb_base import insert_document
@@ -10,21 +14,29 @@ from method.mongodb_base import update_document
 from method.mongodb_dump import dump_data_to_file
 from method.mongodb_import import import_data_from_file
 
-config = configparser.ConfigParser()
-config.read('conf/config.ini')
-mongodb_connection = config.get('main', 'db_url')
-db_name = config.get('main', 'db_name')
-collection_name = config.get('main', 'collection_name')
+create_config_if_not_exists()
 
-client = pymongo.MongoClient(mongodb_connection)
-db = client[db_name]
-collection = db[collection_name]
+user_home = os.path.expanduser("~")
+
+DEFAULT_CONFIG_PATH = os.path.join(user_home, ".zcx", "config.ini")
+DEFAULT_LOG_CONFIG_PATH = os.path.join(user_home, ".zcx", "log.ini")
 
 
 def main():
     parser = argparse.ArgumentParser(prog='mongodb_tool',
                                      description='MongoDB工具',
-                                     usage='%(prog)s [-i <data>] [-d <data>] [-s <data>] [-u <data>] [--dump <filename>] [--import <filename>]')
+                                     usage='%(prog)s [-c <config_file>] [-l <log_config_file>][-i <data>] [-d <data>] [-s <data>]'
+                                           ' [-u <data>] [--dump <filename>] [--import <filename>]')
+
+    parser.add_argument('-c',
+                        metavar='CONFIG_FILE',
+                        help='配置文件路径，默认为 ~/.zcx/config.ini',
+                        default=None)
+
+    parser.add_argument('-l',
+                        metavar='LOG_CONFIG_FILE',
+                        help='日志配置文件路径，默认为 ~/.zcx/log.ini',
+                        default=None)
 
     parser.add_argument('-i',
                         help='执行插入操作，提供数据（JSON格式）',
@@ -66,6 +78,24 @@ def main():
                         type=str)
 
     args = parser.parse_args()
+
+    config_file_path = args.c or DEFAULT_CONFIG_PATH
+
+    # config
+    config = configparser.ConfigParser()
+    config.read(config_file_path)
+
+    mongodb_connection = config.get('main', 'db_url')
+    db_name = config.get('main', 'db_name')
+    collection_name = config.get('main', 'collection_name')
+
+    client = pymongo.MongoClient(mongodb_connection)
+    db = client[db_name]
+    collection = db[collection_name]
+
+    # log
+    log_config_file_path = args.l or DEFAULT_LOG_CONFIG_PATH
+    hlog = HappyLog.get_instance(log_config_file_path)
 
     hlog.var('args', args)
 

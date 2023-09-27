@@ -3,3 +3,6 @@ config.ini
 log.ini
 .idea/
 .pytest_cache
+dist/
+*.lock
+
