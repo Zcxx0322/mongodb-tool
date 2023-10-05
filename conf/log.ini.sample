@@ -22,7 +22,7 @@ args = (sys.stdout,)
 class = logging.handlers.RotatingFileHandler
 level = INFO
 formatter = defaultFormatter
-args = ('/var/log/error.log', 'a', 100000000, 3, 'utf-8', False)
+args = ('var/log/error.log', 'a', 100000000, 3, 'utf-8', False)
 
 [logger_root]
 level = INFO
