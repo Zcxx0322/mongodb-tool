@@ -1,63 +1,110 @@
-# mongodb-tool
+# zcx — MongoDB 命令行管理工具
 
-mongodb操作工具
+通过简单的命令行操作管理 MongoDB 集合，支持增删查改、数据导入导出。
 
-## 环境准备
+## 安装
 
 ```bash
-pip install happy-python pymongo
+pip install zcx
 ```
 
-## 使用举例
+## 快速开始
 
-### 增加数据
+首次运行任意 `zcx` 命令时，会自动在 `~/.zcx/` 目录下生成配置文件：
 
-```bash
-python main.py -i '{"name": "John", "age": 30, "city": "New York"}'
+```
+~/.zcx/
+├── config.ini   # 数据库连接配置（需要手动编辑）
+└── log.ini      # 日志配置（自动生成，无需修改）
 ```
 
-### 增加数据
+编辑 `~/.zcx/config.ini`，填写你的 MongoDB 连接信息：
+
+```ini
+[main]
+db_url = mongodb://127.0.0.1:27017/
+db_name = mydatabase
+collection_name = mycollection
+```
+
+## 使用说明
+
+```
+用法: zcx [-c <配置文件>] [-l <日志配置文件>] [-i <数据>] [-d <条件>]
+          [-s [条件]] [-u <数据>] [--dump <文件名>] [--import <文件名>]
+
+选项:
+  -h, --help       显示此帮助信息并退出
+  -c 配置文件       配置文件路径，默认为 ~/.zcx/config.ini
+  -l 日志配置文件   日志配置文件路径，默认为 ~/.zcx/log.ini
+  -i 数据          执行插入操作，提供数据（JSON 格式）
+  -d 条件          执行删除操作，提供查询条件（JSON 格式）
+  -s [条件]        执行查询操作，提供查询条件（JSON 格式），不填条件则查全部
+  -u 数据          执行更新操作，提供查询条件和更新数据（JSON 格式）
+  --dump 文件名     导出集合数据到指定文件（JSON 格式）
+  --import 文件名   从指定文件导入数据到集合（JSON 格式）
+```
+
+## 示例
+
+### 插入数据
+
 ```bash
-python main.py -i '{"name": "John", "age": 30, "city": "New York"}'
+zcx -i '{"name": "Alice", "age": 25, "city": "Beijing"}'
+```
+
+### 查询数据
+
+```bash
+# 查询全部
+zcx -s
+
+# 按条件查询
+zcx -s '{"name": "Alice"}'
+```
+
+### 更新数据
+
+以 `name` 字段作为匹配条件，更新该记录的其他字段：
+
+```bash
+zcx -u '{"name": "Alice", "age": 26, "city": "Shanghai"}'
 ```
 
 ### 删除数据
+
 ```bash
-python main.py -d '{"name": "John", "age": 30, "city": "New York"}'
+zcx -d '{"name": "Alice"}'
 ```
 
-### 查找数据
+### 导出数据
+
+将集合中所有数据导出为 JSON 文件：
+
 ```bash
-python main.py -s '{"name": "John"}'
-
-python main.py -s 
+zcx --dump backup.json
 ```
 
-### 修改数据
+### 导入数据
+
+从 JSON 文件批量导入数据（重复键自动跳过）：
+
 ```bash
-python main.py -u '{"name": "John", "age": 34, "city": "Shanghai"}'
+zcx --import backup.json
 ```
 
-## 使用详细
-请使用python main.py --help/-h
+### 使用自定义配置文件
+
+```bash
+zcx -c /path/to/config.ini -s
 ```
-$ python main.py --help
-2023-10-05 17:25:30 20519 [INFO] 未启用日志配置文件，加载默认设置
-2023-10-05 17:25:30 20519 [INFO] 日志配置文件 '/home/colamps/.zcx/log.ini' 加载成功
-2023-10-05 17:25:30 20519 [ERROR] 命令行参数错误，请查看使用说明：
-usage: mongodb_tool [-c <config_file>] [-l <log_config_file>][-i <data>] [-d <data>] [-s <data>] [-u <data>] [--dump <filename>] [--import <filename>]
 
-MongoDB工具
+## 依赖
 
-options:
-  -h, --help            show this help message and exit
-  -c CONFIG_FILE        配置文件路径，默认为 ~/.zcx/config.ini
-  -l LOG_CONFIG_FILE    日志配置文件路径，默认为 ~/.zcx/log.ini
-  -i INSERT_DATA        执行插入操作，提供数据（JSON格式）
-  -d DELETE_DATA        执行删除操作，提供查询条件（JSON格式）
-  -s [SEARCH_DATA]      执行查询操作，提供查询条件（JSON格式）
-  -u UPDATE_DATA        执行更新操作，提供查询条件和更新数据（JSON格式）
-  --dump DUMP_FILE      导出数据到指定文件（JSON格式）
-  --import IMPORT_FILE  从指定文件导入数据（JSON格式）
+- Python >= 3.9
+- [pymongo](https://pypi.org/project/pymongo/) >= 4.0
+- [happy-python](https://pypi.org/project/happy-python/)
 
-```
+## License
+
+MIT

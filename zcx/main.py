@@ -8,15 +8,13 @@ import pymongo
 import pymongo.errors
 from happy_python import HappyLog
 
-from method.file_create import create_config_if_not_exists
-from method.mongodb_base import delete_document
-from method.mongodb_base import find_document
-from method.mongodb_base import insert_document
-from method.mongodb_base import update_document
-from method.mongodb_dump import dump_data_to_file
-from method.mongodb_import import import_data_from_file
-
-create_config_if_not_exists()
+from .method.file_create import create_config_if_not_exists
+from .method.mongodb_base import delete_document
+from .method.mongodb_base import find_document
+from .method.mongodb_base import insert_document
+from .method.mongodb_base import update_document
+from .method.mongodb_dump import dump_data_to_file
+from .method.mongodb_import import import_data_from_file
 
 user_home = os.path.expanduser("~")
 
@@ -44,8 +42,10 @@ class _ChineseArgumentParser(argparse.ArgumentParser):
 
 
 def main():
-    parser = _ChineseArgumentParser(prog='mongodb_tool',
-                                    description='MongoDB工具',
+    create_config_if_not_exists()
+
+    parser = _ChineseArgumentParser(prog='zcx',
+                                    description='MongoDB 命令行管理工具',
                                     usage='%(prog)s [-c <配置文件>] [-l <日志配置文件>] [-i <数据>] [-d <数据>]'
                                           ' [-s [数据]] [-u <数据>] [--dump <文件名>] [--import <文件名>]',
                                     add_help=False)
@@ -66,21 +66,21 @@ def main():
 
     parser.add_argument('-i',
                         metavar='数据',
-                        help='执行插入操作，提供数据（JSON格式）',
+                        help='执行插入操作，提供数据（JSON 格式）',
                         action='store',
                         dest='insert_data',
                         type=json.loads)
 
     parser.add_argument('-d',
                         metavar='条件',
-                        help='执行删除操作，提供查询条件（JSON格式）',
+                        help='执行删除操作，提供查询条件（JSON 格式）',
                         action='store',
                         dest='delete_data',
                         type=json.loads)
 
     parser.add_argument('-s',
                         metavar='条件',
-                        help='执行查询操作，提供查询条件（JSON格式）',
+                        help='执行查询操作，提供查询条件（JSON 格式）',
                         action='store',
                         dest='search_data',
                         type=str,
@@ -90,21 +90,21 @@ def main():
 
     parser.add_argument('-u',
                         metavar='数据',
-                        help='执行更新操作，提供查询条件和更新数据（JSON格式）',
+                        help='执行更新操作，提供查询条件和更新数据（JSON 格式）',
                         action='store',
                         dest='update_data',
                         type=json.loads)
 
     parser.add_argument('--dump',
                         metavar='文件名',
-                        help='导出数据到指定文件（JSON格式）',
+                        help='导出数据到指定文件（JSON 格式）',
                         action='store',
                         dest='dump_file',
                         type=str)
 
     parser.add_argument('--import',
                         metavar='文件名',
-                        help='从指定文件导入数据（JSON格式）',
+                        help='从指定文件导入数据（JSON 格式）',
                         action='store',
                         dest='import_file',
                         type=str)
@@ -225,7 +225,3 @@ def main():
         sys.exit(1)
     finally:
         client.close()
-
-
-if __name__ == "__main__":
-    main()
