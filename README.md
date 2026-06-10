@@ -4,8 +4,19 @@
 
 ## 安装
 
+推荐使用 [pipx](https://pipx.pypa.io) 安装，安装后可直接使用 `zcx` 命令，无需手动配置 PATH：
+
+```bash
+pipx install zcx
+```
+
+也可以用 pip 安装，但部分系统（如 Arch Linux）需要手动将 `~/.local/bin` 加入 PATH：
+
 ```bash
 pip install zcx
+
+# 如果安装后找不到 zcx 命令，执行以下命令（写入 ~/.bashrc 永久生效）：
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```
 
 ## 快速开始
